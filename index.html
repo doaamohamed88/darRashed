@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dar Rashid Publishing</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Minimal JS-detection helper (used only for animations/intros)
+        document.documentElement.classList.add('js');
+    </script>
+</head>
+
+<body class="font-arabi">
+
+
+    <!-- ================= HEADER ================= -->
+    <!-- TOP UTILITY BAR -->
+    <div class="
+    flex items-center justify-between
+    px-8 py-1 
+    text-xs
+    backdrop-blur-md
+    bg-dark
+    border-b border-primary
+    relative
+    z-50 top-utility-bar
+  ">
+        <div class="flex items-center gap-4 text-primary">
+            <a href="#" aria-label="Facebook" class="hover:scale-110  transition" title="facebook">
+                <i class="w-5 h-5" data-lucide="facebook" class="w-5 h-5"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="hover:scale-110 transition" title="instagram">
+                <i class="w-5 h-5" data-lucide="instagram"></i>
+            </a>
+            <a href="mailto:info@example.com" aria-label="Email"
+                class="hover:scale-110 transition hover:shadow-2xl shadow-primary">
+                <i class="w-5 h-5" data-lucide="mail" title="Email"></i>
+            </a>
+        </div>
+
+        <div class="flex items-center gap-5 text-primary">
+
+            <button aria-label="إمكانية الوصول" class="hover:scale-110 transition">
+                <i class="w-5 h-5" data-lucide="accessibility"></i>
+            </button>
+
+            <div class="relative">
+                <button data-dropdown-toggle="profile-dropdown" class="hover:scale-110 transition" aria-label="الحساب">
+                    <i class="w-5 h-5" data-lucide="user"></i>
+                </button>
+
+                <!-- Profile Dropdown -->
+                <div id="profile-dropdown" class="
+  hidden absolute right-0 mt-2 z-50
+  w-44 
+  bg-white text-dark
+  rounded-lg shadow-lg
+  border border-default-medium
+">
+                    <ul class="flex flex-col divide-y divide-dark-10 text-sm font-medium">
+                        <li>
+                            <a href="#" class="
+      group relative block py-2 pr-4 overflow-hidden
+      transition-all duration-300 hover:pr-7 
+    ">
+                                <span class="
+        absolute right-0 top-1/2 h-0 w-[3px] bg-primary
+        transition-all duration-300
+        group-hover:h-full group-hover:top-0 rounded-full
+      "></span>
+                                <span class="relative z-10 hover:text-primary">تسجيل الدخول</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="
+      group relative block py-2 pr-4 overflow-hidden
+      transition-all duration-300 hover:pr-7
+    ">
+                                <span class="
+        absolute right-0 top-1/2 h-0 w-[3px] bg-primary
+        transition-all duration-300
+        group-hover:h-full group-hover:top-0 rounded-full
+      "></span>
+                                <span class="relative z-10 hover:text-primary">إنشاء حساب جديد</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- LANGUAGE -->
+            <div class="relative">
+                <button data-dropdown-toggle="lang-dropdown" class="flex items-center gap-1 hover:scale-110 transition"
+                    aria-label="اللغة">
+                    <i class="w-5 h-5" data-lucide="globe"></i>
+                    <span class="text-[11px]">AR</span>
+                </button>
+
+                <!-- Language Dropdown -->
+                <div id="lang-dropdown" class="
+  hidden absolute  mt-2 z-50
+  w-40
+  bg-white text-dark
+  rounded-lg shadow-lg
+  border border-default-medium
+">
+                    <ul class="flex flex-col divide-y divide-dark-10 text-sm font-medium">
+
+                        <li>
+                            <a href="#" class="
+              group relative block py-2 pr-4 overflow-hidden
+              transition-all duration-300 hover:pr-7
+            ">
+                                <span class="
+                  absolute right-0 top-1/2 h-0 w-[3px] bg-primary
+                  transition-all duration-300
+                  group-hover:h-full group-hover:top-0 rounded-full
+                "></span>
+                                <span class="relative z-10 hover:text-primary">
+                                    العربية
+                                </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="
+              group relative block py-2 pr-4 overflow-hidden
+              transition-all duration-300 hover:pr-7
+            ">
+                                <span class="
+                  absolute right-0 top-1/2 h-0 w-[3px] bg-primary
+                  transition-all duration-300
+                  group-hover:h-full group-hover:top-0 rounded-full
+                "></span>
+                                <span class="relative z-10 hover:text-primary">
+                                    English
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <header class="
+        
+        pr-10
+        backdrop-blur-2xl
+bg-dark
+        border-y-[1px] border-primary
+        transition-all duration-300 ease-out
+        relative z-40
+    ">
+        <div class="   w-full h-full rounded-br-[5.5rem] glass-card">
+            <div class="container mx-auto h-24 flex items-center justify-between px-4">
+
+                <!-- LOGO -->
+                <div class="mr-14 ">
+                    <img id="header-logo" src="../public/images/dar-rashed.png"
+                        class="w-24 transition-transform duration-300 " alt="logo" />
+                </div>
+
+                <!-- DESKTOP NAV -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-dark">
+                    <a href="#" class="nav-item relative group">
+                        <span>الرئيسية</span>
+                        <span class="absolute -bottom-2 right-0 h-[2px] w-0 bg-primary
+                           transition-all duration-300 group-hover:w-full">
+                        </span>
+                    </a>
+
+                    <a href="#" class="nav-item relative group">
+                        <span>خدمات الدار</span>
+                        <span
+                            class="absolute -bottom-2 right-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#" class="nav-item relative group">
+                        <span>الإصدارات</span>
+                        <span
+                            class="absolute -bottom-2 right-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#" class="nav-item relative group">
+                        <span>الأخبار</span>
+                        <span
+                            class="absolute -bottom-2 right-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#" class="nav-item relative group">
+                        <span>فعاليات الدار</span>
+                        <span
+                            class="absolute -bottom-2 right-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#" class="relative group">
+                        <span>اتصل بنا</span>
+                        <span
+                            class="absolute -bottom-2 right-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </nav>
+
+                <!-- UTILITIES -->
+                <div class="flex items-center gap-3">
+
+                    <!-- SEARCH -->
+                    <div class="relative hidden md:block">
+                        <div
+                            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none z-10 justify-center ">
+                            <i class="w-4 h-4" data-lucide="search"></i>
+                        </div>
+
+                        <input type="search" placeholder="ابحث" class="
+                        p-3 ps-9
+                        bg-white/70
+                        backdrop-blur-md
+                        border border-default-medium
+                        border-primary
+                        focus:outline-none focus:border-primary-80
+                        text-heading text-sm
+                        rounded-xl
+                        shadow-xs
+                        focus:border-2
+                        focus:shadow-md
+                        placeholder:text-body
+                    " />
+                    </div>
+
+                    <!-- MOBILE MENU BUTTON -->
+                    <button data-collapse-toggle="mobileMenu" class="
+                    lg:hidden
+                    rounded-xl
+                    p-2
+                    backdrop-blur-md
+                    bg-white/60
+                    border border-white/30
+                    shadow-sm
+                    transition-all duration-300
+                    hover:scale-110
+                ">
+                        <i class="w-5 h-5" data-lucide="menu"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu"
+            class="hidden lg:hidden absolute top-full mt-2 right-1/2 translate-x-1/2 w-[92%] rounded-2xl backdrop-blur-2xl bg-white/90 border border-primary-50 shadow-lg px-5 py-3 z-50">
+            <nav class="flex flex-col divide-y divide-dark-20 text-sm font-medium text-dark"> <a href="#"
+                    class="group relative py-3 pr-4 overflow-hidden transition-all duration-300 ease-out hover:pr-8">
+                    <span
+                        class="absolute right-0 top-1/2 h-0 w-[3px] bg-primary transition-all duration-300 group-hover:h-full group-hover:top-0 rounded-full  ">
+                    </span> <span class="relative z-10 hover:text-primary">الرئيسية</span> </a> <a href="#"
+                    class="group relative py-3 pr-4 overflow-hidden hover:pr-8 transition-all duration-300"> <span
+                        class="absolute right-0 top-1/2 h-0 w-[3px] bg-primary group-hover:h-full group-hover:top-0 transition-all duration-300 rounded-full "></span>
+                    <span class="relative z-10 hover:text-primary">خدمات الدار</span> </a> <a href="#"
+                    class="group relative py-3 pr-4 overflow-hidden hover:pr-8 transition-all duration-300"> <span
+                        class="absolute right-0 top-1/2 h-0 w-[3px] bg-primary group-hover:h-full group-hover:top-0 transition-all duration-300 rounded-full "></span>
+                    <span class="relative z-10 hover:text-primary">الإصدارات</span> </a> <a href="#"
+                    class="group relative py-3 pr-4 overflow-hidden hover:pr-8 transition-all duration-300"> <span
+                        class="absolute right-0 top-1/2 h-0 w-[3px] bg-primary group-hover:h-full group-hover:top-0 transition-all duration-300 rounded-full "></span>
+                    <span class="relative z-10 hover:text-primary">الأخبار</span> </a> <a href="#"
+                    class="group relative py-3 pr-4 overflow-hidden hover:pr-8 transition-all duration-300"> <span
+                        class="absolute right-0 top-1/2 h-0 w-[3px] bg-primary group-hover:h-full group-hover:top-0 transition-all duration-300 rounded-full "></span>
+                    <span class="relative z-10 hover:text-primary">فعاليات الدار</span> </a> <a href="#"
+                    class="group relative py-3 pr-4 overflow-hidden hover:pr-8 transition-all duration-300"> <span
+                        class="absolute right-0 top-1/2 h-0 w-[3px] bg-primary group-hover:h-full group-hover:top-0 transition-all duration-300 rounded-full "></span>
+                    <span class="relative z-10 hover:text-primary">اتصل بنا</span> </a> </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= hero ================= -->
+        <section class="relative h-[75vh] overflow-hidden">
+
+            <div id="default-carousel" class="absolute inset-0" data-carousel="slide">
+
+                <!-- OVERLAY  -->
+                <div class="
+      absolute inset-0 z-10
+      h-full
+      bg-gradient-to-t
+      from-[#231F20]/80
+      via-[#231F20]/60
+      to-[#231F20]/40
+    "></div>
+
+                <!-- Subtle Gold Noise / Accent -->
+                <div class="
+      absolute inset-0 z-10
+      bg-[radial-gradient(ellipse_at_top,_rgba(169,138,91,0.12),_transparent_60%)]
+      pointer-events-none
+    "></div>
+
+                <div class="relative h-full overflow-hidden z-0">
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./public/images/hero1.jpeg" class="absolute inset-0 w-full h-full object-cover" />
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./public/images/hero4.jpeg" class="absolute inset-0 w-full h-full object-cover" />
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./public/images/hero2.jpeg" class="absolute inset-0 w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="
+    relative z-20 h-4/5
+    flex items-center justify-center
+    container mx-auto px-6
+  ">
+
+
+                <div class="max-w-2xl text-right text-white space-y-6">
+
+                    <span class="
+        inline-block text-[11px] tracking-[0.3em]
+        uppercase text-[#a98a5b]
+      ">
+                        Dar Rashid Publishing
+                    </span>
+
+                    <h1 class="
+        text-4xl md:text-5xl xl:text-6xl
+        font-bold leading-tight text-pretty text-primary
+      ">
+                        دار راشد للنشر
+                    </h1>
+
+                    <div class="w-20 h-[2px] bg-[#a98a5b]/80"></div>
+
+                    <p class="
+        text-base md:text-lg
+        text-white/85
+        leading-relaxed
+      ">
+                        منصة ثقافية إماراتية متخصصة في صناعة المعرفة،
+                        ونشر الفكر، وإبراز الإبداع العربي بأسلوب يليق
+                        بتاريخ الكتاب وقيمته.
+                    </p>
+
+                    <div class="flex gap-4  pt-4 ctaButton">
+
+                        <a href="#" class="
+          px-6 py-3 rounded-full
+          bg-primary 
+          text-sm font-medium
+          hover:bg-[#a98a5b]/90
+          text-white
+          transition
+        ">
+                            استكشف الإصدارات
+                        </a>
+
+                        <a href="#" class="
+          px-6 py-3 rounded-full
+          border border-white/30
+          text-white text-sm
+          hover:border-[#a98a5b]
+          hover:text-[#a98a5b]
+          transition
+        ">
+                            عن الدار
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT US -->
+        <section class="relative overflow-hidden ">
+            <div class="h-4  glass-card shadow-md border border-primary rounded-b-3xl rounded-t-md w-full ">
+            </div>
+            <div class="relative z-20 container mx-auto px-6 py-20">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <div class="about-text text-right text-white space-y-6 max-w-xl">
+
+                        <span class="inline-block text-sm tracking-[0.35em] uppercase text-[#a98a5b]">
+                            عن الدار
+                        </span>
+
+                        <h2 class="text-3xl md:text-4xl font-bold leading-tight text-dark">
+                            دار راشد للنشر
+                        </h2>
+
+                        <div class="w-24 h-[2px] bg-[#a98a5b]/80"></div>
+
+                        <p class="text-dark-80 leading-relaxed text-base md:text-lg">
+                            دار راشد للنشر هي مؤسسة ثقافية إماراتية اطلق سمو الشيخ الدكتور راشد بن حمد الشرقي رئيس هيئة
+                            الفجيرة للثقافة والإعلام من جناح هيئة الفجيرة للثقافة والإعلام بمعرض ابوظبي الدولي للكتاب
+                            2019 والتي أطلقتها الهيئة تزامنا مع حفل تتويج الفائزين بجائزة راشد بن حمد
+                            الشرقي للإبداع في دورتها الأولى 2019.
+                        </p>
+
+                        <p class="text-dark-80 leading-relaxed">
+                            تنطلق الدار من إمارة الفجيرة، وتسعى إلى أن تكون منصة
+                            فاعلة للمفكرين والكتّاب والباحثين، مع التركيز
+                            على جودة المحتوى وأصالته.
+                        </p>
+
+                    </div>
+
+                    <div class="about-media hidden lg:flex justify-center ">
+                        <div class="relative border border-[#a98a5b]/40 p-10 rounded-2xl backdrop-blur-sm bg-white/5 max-w-md  bg-gradient-to-br
+  from-[#A98A5B]/30
+  via-[#A98A5B]/20
+  to-white/10
+  shadow-[0_8px_32px_rgba(169,138,91,0.25)]" style="background-image: url(../public/images/bg.jpeg);">
+
+                            <span class="text-[#a98a5b] text-5xl leading-none">“</span>
+
+                            <p class="text-primary text-lg leading-relaxed mt-4">
+                                نؤمن بأن الكتاب ليس مجرد صفحات،
+                                بل هو نافذة للفكر
+                                وجسر يصل الماضي بالمستقبل.
+                            </p>
+
+                            <div class="mt-6 text-sm text-[#a98a5b] tracking-wide">
+                                Dar Rashid Publishing
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- activites -->
+        <section class="relative  overflow-hidden bg-[#231F20]">
+            <div class="h-4  glass-card shadow-md border border-primary rounded-b-3xl rounded-t-md w-full ">
+            </div>
+
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-1/3 left-1/2 -translate-x-1/2
+      w-[55%] h-[400px]
+      bg-[#A98A5B] blur-[160px] opacity-40">
+                </div>
+            </div>
+
+            <div class="relative container mx-auto px-6 py-20">
+
+                <div class="text-center max-w-2xl mx-auto mb-24">
+                    <span class="inline-block text-sm tracking-[0.35em] uppercase text-[#A98A5B]">
+                        أحدث الفعاليات
+                    </span>
+                    <h2 class="mt-4 text-3xl md:text-4xl font-bold text-white">
+                        محطات ثقافية مع دار راشد
+                    </h2>
+                    <div class="mx-auto mt-4 w-24 h-[2px] bg-[#A98A5B]/80"></div>
+                </div>
+
+                <div class="relative">
+
+                    <div class="absolute top-1/2 right-0 left-0 h-[2px] bg-[#A98A5B]/40"></div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+
+                        <div class="activity-card text-center group">
+
+                            <div class="mx-auto w-5 h-5 rounded-full bg-[#A98A5B]
+            ring-8 ring-[#A98A5B]/20 mb-8
+            group-hover:scale-125 transition"></div>
+
+                            <!-- Card -->
+                            <div class="rounded-3xl p-6
+            backdrop-blur-xl bg-white/5
+            border border-[#A98A5B]/25
+            shadow-[0_20px_60px_rgba(0,0,0,0.6)]
+            group-hover:-translate-y-2 transition duration-500">
+
+                                <span class="block text-xs text-[#A98A5B] mb-2">
+                                    فبراير 2026
+                                </span>
+
+                                <h3 class="text-lg font-bold text-white mb-3
+              group-hover:text-[#A98A5B] transition">
+                                    ندوة القراءة الإبداعية
+                                </h3>
+
+                                <p class="text-sm text-white/75 leading-relaxed mb-5">
+                                    ندوة ثقافية تناقش دور القراءة في تشكيل الوعي
+                                    بمشاركة نخبة من المثقفين.
+                                </p>
+
+                                <a href="#" class="inline-flex items-center gap-2
+              px-5 py-2 rounded-full text-sm
+              border border-[#A98A5B]/60
+              hover:bg-[#A98A5B] text-white transition">
+                                    التفاصيل
+                                    <span class="group-hover:-translate-x-1 transition-transform">←</span>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="activity-card text-center group">
+
+                            <!-- Node -->
+                            <div class="mx-auto w-5 h-5 rounded-full bg-[#A98A5B]
+            ring-8 ring-[#A98A5B]/20 mb-8
+            group-hover:scale-125 transition"></div>
+
+                            <!-- Card -->
+                            <div class="rounded-3xl p-6
+            backdrop-blur-xl bg-white/5
+            border border-[#A98A5B]/25
+            shadow-[0_20px_60px_rgba(0,0,0,0.6)]
+            group-hover:-translate-y-2 transition duration-500">
+
+                                <span class="block text-xs text-[#A98A5B] mb-2">
+                                    فبراير 2026
+                                </span>
+
+                                <h3 class="text-lg font-bold text-white mb-3
+              group-hover:text-[#A98A5B] transition">
+                                    ندوة القراءة الإبداعية
+                                </h3>
+
+                                <p class="text-sm text-white/75 leading-relaxed mb-5">
+                                    ندوة ثقافية تناقش دور القراءة في تشكيل الوعي
+                                    بمشاركة نخبة من المثقفين.
+                                </p>
+
+                                <a href="#" class="inline-flex items-center gap-2
+              px-5 py-2 rounded-full text-sm
+              border border-[#A98A5B]/60
+              text-[#A98A5B]
+              hover:bg-[#A98A5B] text-white transition">
+                                    التفاصيل
+                                    <span class="group-hover:-translate-x-1 transition-transform">←</span>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="activity-card text-center group">
+
+                            <!-- Node -->
+                            <div class="mx-auto w-5 h-5 rounded-full bg-[#A98A5B]
+            ring-8 ring-[#A98A5B]/20 mb-8
+            group-hover:scale-125 transition"></div>
+
+                            <!-- Card -->
+                            <div class="rounded-3xl p-6
+            backdrop-blur-xl bg-white/5
+            border border-[#A98A5B]/25
+            shadow-[0_20px_60px_rgba(0,0,0,0.6)]
+            group-hover:-translate-y-2 transition duration-500">
+
+                                <span class="block text-xs text-[#A98A5B] mb-2">
+                                    فبراير 2026
+                                </span>
+
+                                <h3 class="text-lg font-bold text-white mb-3
+              group-hover:text-[#A98A5B] transition">
+                                    ندوة القراءة الإبداعية
+                                </h3>
+
+                                <p class="text-sm text-white/75 leading-relaxed mb-5">
+                                    ندوة ثقافية تناقش دور القراءة في تشكيل الوعي
+                                    بمشاركة نخبة من المثقفين.
+                                </p>
+
+                                <a href="#" class="inline-flex items-center gap-2
+              px-5 py-2 rounded-full text-sm
+              border border-[#A98A5B]/60
+              text-[#A98A5B]
+              hover:bg-[#A98A5B] text-white transition">
+                                    التفاصيل
+                                    <span class="group-hover:-translate-x-1 transition-transform">←</span>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="mt-24 text-center">
+                    <a href="#" class="inline-flex items-center gap-3
+        px-10 py-4 rounded-full
+        border border-[#A98A5B]
+        text-sm font-medium bg-primary hover:bg-[#a98a5b]/90
+
+        text-white transition">
+                        جميع الفعاليات
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <!-- news -->
+        <section class="relative  overflow-hidden  w-full ">
+            <div class="h-4 bg-gradient-to-t glass-card shadow-md border  rounded-b-3xl rounded-t-md w-full ">
+            </div>
+            <div class="py-20">
+                <div class="absolute inset-0 pointer-events-none">
+                    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[70%] h-[400px]
+      bg-[#A98A5B]/20 blur-[140px] opacity-40"></div>
+                </div>
+
+                <div class="relative container mx-auto px-6">
+
+                    <div class="text-center max-w-2xl mx-auto mb-20">
+                        <span class="inline-block text-sm tracking-[0.35em] uppercase text-[#A98A5B]">
+                            أحدث الأخبار
+                        </span>
+                        <h2 class="mt-4 text-3xl md:text-4xl font-bold text-dark">
+                            مستجدات دار راشد للنشر
+                        </h2>
+                        <div class="mx-auto mt-4 w-20 h-[2px] bg-[#A98A5B]/80"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+                        <article class="news-card group relative rounded-3xl overflow-hidden
+        backdrop-blur-xl 
+        border border-[#A98A5B]/30
+        shadow-[0_10px_40px_rgba(35,31,32,0.15)]
+        hover:shadow-[0_20px_60px_rgba(169,138,91,0.35)]
+        transition-all duration-500 hover:-translate-y-2
+        
+        ">
+
+                            <div class="relative h-64 overflow-hidden">
+                                <video src="./public/VIDEOS/news3.mp4" autoplay muted loop playsinline
+                                    class="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-110 transition duration-700"></video>
+
+                                <div class="absolute inset-0 bg-gradient-to-t
+            from-[#231F20]/90 via-[#231F20]/50 to-transparent"></div>
+
+                                <span class="absolute top-4 right-4
+            bg-[#A98A5B]/90 text-white text-xs px-4 py-1 rounded-full backdrop-blur">
+                                    يناير 2024
+                                </span>
+                            </div>
+
+                            <div class="p-6 text-right space-y-4">
+
+                                <h3
+                                    class="text-lg font-bold text-dark-80 leading-snug group-hover:text-[#A98A5B] transition line-clamp-1">
+                                    المشاركة في معرض القاهرة الدولي للكتاب </h3>
+                                <p class="text-sm text-dark-80 leading-relaxed line-clamp-3 "> نظمت دار راشد للنشر
+                                    التابعة لهيئة
+                                    الفجيؤة
+                                    للثقافة والإعلام فعالية قرائية للأطفال ضمن مشاركتهافى معرض القاهرة الدولى للكتاب فى
+                                    دورته 57 لعام 2026و تضمنت قراءة قصة أبى هو بطلى بأسلوب تفاعلى مشوق </p>
+                                <div class="pt-2">
+                                    <a href="#" class="inline-flex items-center gap-2
+        px-5 py-2 rounded-full
+        text-sm font-medium
+        border border-[#A98A5B]/60
+        text-[#A98A5B]
+        backdrop-blur-md bg-white/10
+        hover:bg-[#A98A5B]
+        hover:text-white
+        transition-all duration-300">
+                                        اقرأ المزيد
+                                        <span class="transition-transform group-hover:-translate-x-1">←</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </article>
+                        <article class="news-card group relative rounded-3xl overflow-hidden
+        backdrop-blur-xl 
+        border border-[#A98A5B]/30
+        shadow-[0_10px_40px_rgba(35,31,32,0.15)]
+        hover:shadow-[0_20px_60px_rgba(169,138,91,0.35)]
+        transition-all duration-500 hover:-translate-y-2">
+
+                            <div class="relative h-64 overflow-hidden">
+                                <video src="./public/VIDEOS/news2.mp4" autoplay muted loop playsinline
+                                    class="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-110 transition duration-700"></video>
+
+                                <div class="absolute inset-0 bg-gradient-to-t
+            from-[#231F20]/90 via-[#231F20]/50 to-transparent"></div>
+
+                                <span class="absolute top-4 right-4
+            bg-[#A98A5B]/90 text-white text-xs px-4 py-1 rounded-full backdrop-blur">
+                                    يناير 2024
+                                </span>
+                            </div>
+
+                            <div class="p-6 text-right space-y-4">
+                                <h3
+                                    class="text-lg font-bold text-dark-80 group-hover:text-[#A98A5B] transition line-clamp-1">
+                                    فعالية
+                                    دردشات
+                                    قارئ </h3>
+                                <p class="text-sm text-dark-80 line-clamp-3 "> شاركت دار راشد للنشر في فعالية «دردشات
+                                    قارئ» التي
+                                    نظمتها
+                                    المكتبة العامة في خورفكان، دعمًا لفئة اليافعين من القرّاء والكتّاب، وتعزيزًا لثقافة
+                                    القراءة والكتابة، من خلال جلسات حوارية تفاعلية تسلط الضوء على التجارب الإبداعية
+                                    والتحديات التي تواجه المواهب الشابة. <a href="#"
+                                        class="inline-flex items-center gap-2 text-sm text-[#A98A5B] font-medium">
+                                        <div class="pt-2">
+                                            <a href="#" class="inline-flex items-center gap-2
+        px-5 py-2 rounded-full
+        text-sm font-medium
+        border border-[#A98A5B]/60
+        text-[#A98A5B]
+        backdrop-blur-md bg-white/10
+        hover:bg-[#A98A5B]
+        hover:text-white
+        transition-all duration-300">
+                                                اقرأ المزيد
+                                                <span class="transition-transform group-hover:-translate-x-1">←</span>
+                                            </a>
+                                        </div>
+
+
+                            </div>
+                        </article>
+                        <article class="news-card group relative rounded-3xl overflow-hidden
+        backdrop-blur-xl bg-white/15
+        border border-[#A98A5B]/30
+        shadow-[0_10px_40px_rgba(35,31,32,0.15)]
+        hover:shadow-[0_20px_60px_rgba(169,138,91,0.35)]
+        transition-all duration-500 hover:-translate-y-2">
+
+                            <div class="relative h-64 overflow-hidden">
+                                <video src="./public/VIDEOS/news1.mp4" autoplay muted loop playsinline
+                                    class="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-110 transition duration-700"></video>
+
+                                <div class="absolute inset-0 bg-gradient-to-t
+            from-[#231F20]/90 via-[#231F20]/50 to-transparent"></div>
+
+                                <span class="absolute top-4 right-4
+            bg-[#A98A5B]/90 text-white text-xs px-4 py-1 rounded-full backdrop-blur">
+                                    يناير 2024
+                                </span>
+                            </div>
+
+                            <div class="p-6 text-right space-y-4">
+                                <h3
+                                    class="text-lg font-bold text-dark-80 group-hover:text-[#A98A5B] transition line-clamp-1">
+                                    دورة
+                                    تدريبية
+                                    بعنوان التحرير والنشر </h3>
+                                <p class="text-sm text-dark-80 line-clamp-3"> نظمت دار راشد للنشر النابعة لهيئة الفجيرة
+                                    للثقافة
+                                    والإعلام
+                                    دورة تدريبة بعنوان التحرير والنشر لطلبة المدارس بهدف تنمية مهارات الكتابة وتعريفهم
+                                    بأساسيات التحري واعداد النصوص الجاهزة للنشر </p>
+                                <div class="pt-2">
+                                    <a href="#" class="inline-flex items-center gap-2
+        px-5 py-2 rounded-full
+        text-sm font-medium
+        border border-[#A98A5B]/60
+        text-[#A98A5B]
+        backdrop-blur-md bg-white/10
+        hover:bg-[#A98A5B]
+        hover:text-white
+        transition-all duration-300">
+                                        اقرأ المزيد
+                                        <span class="transition-transform group-hover:-translate-x-1">←</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div class="mt-20 text-center">
+                        <a href="#" class="inline-flex items-center gap-3 px-10 py-4
+        rounded-full border border-[#A98A5B]
+        text-sm font-medium text-white bg-primary
+                  hover:bg-[#a98a5b]/90
+ transition">
+                            جميع الأخبار
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+        <!-- books -->
+        <section class="relative  overflow-hidden bg-dark">
+            <div
+                class="h-4 bg-gradient-to-t glass-card shadow-md border border-primary rounded-b-3xl rounded-t-md w-full ">
+            </div>
+
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-1/3 left-1/2 -translate-x-1/2
+      w-[80%] h-[400px]
+      bg-[#A98A5B] blur-[160px] opacity-40">
+                </div>
+            </div>
+
+            <div class="relative container mx-auto px-6 py-20">
+
+                <div class="text-center max-w-2xl mx-auto mb-20">
+                    <span class="inline-block text-sm tracking-[0.35em] uppercase text-[#A98A5B]">
+                        أحدث الإصدارات
+                    </span>
+                    <h2 class="mt-4 text-3xl md:text-4xl font-bold text-white">
+                        لمحة عن أحدث كتب الدار
+                    </h2>
+                    <div class="mx-auto mt-4 w-24 h-[2px] bg-[#A98A5B]/80"></div>
+                    <p class="mt-6 text-white/80 leading-relaxed">
+                        مجموعة مختارة من أحدث الإصدارات التي تعكس رؤية دار راشد للنشر
+                        في تقديم محتوى معرفي وثقافي راقٍ.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
+
+                    <article class="book-card group relative text-center">
+
+                        <div class="relative mx-auto w-[220px] h-[320px]
+          rounded-xl overflow-hidden
+          shadow-[0_25px_60px_rgba(0,0,0,0.6)]
+          group-hover:-translate-y-3 transition duration-500">
+
+                            <img src="./public/images/book1.jpg" alt="غلاف الكتاب" class="w-full h-full object-cover">
+
+                            <div class="absolute inset-0 bg-gradient-to-t
+            from-[#231F20]/60 to-transparent">
+                            </div>
+                        </div>
+
+                        <div class="mt-8 space-y-3">
+                            <h3 class="text-lg font-bold text-white">
+                                عنوان الكتاب
+                            </h3>
+                            <p class="text-sm text-white/70 max-w-xs mx-auto leading-relaxed">
+                                نبذة قصيرة تعطي لمحة سريعة عن محتوى الكتاب
+                                وأهم محاوره الفكرية.
+                            </p>
+                        </div>
+
+                        <div class="mt-6 flex justify-center gap-4">
+
+                            <a href="#" class="px-5 py-2 rounded-full
+             text-sm font-medium
+             border border-[#A98A5B]/60
+             text-[#A98A5B]
+             backdrop-blur-md bg-white/5
+             hover:bg-[#A98A5B]
+             hover:text-white
+             transition">
+                                تفاصيل الكتاب
+                            </a>
+
+                            <a href="#" class="px-5 py-2 rounded-full
+             text-sm font-medium
+             bg-[#A98A5B]
+             text-white
+             hover:bg-[#A98A5B]/90
+             transition">
+                                شراء الآن
+                            </a>
+
+                        </div>
+                    </article>
+                    <article class="book-card group relative text-center">
+
+                        <div class="relative mx-auto w-[220px] h-[320px]
+          rounded-xl overflow-hidden
+          shadow-[0_25px_60px_rgba(0,0,0,0.6)]
+          group-hover:-translate-y-3 transition duration-500">
+
+                            <img src="./public/images/book2.jpg" alt="غلاف الكتاب" class="w-full h-full object-cover">
+
+                            <div class="absolute inset-0 bg-gradient-to-t
+            from-[#231F20]/60 to-transparent">
+                            </div>
+                        </div>
+
+                        <div class="mt-8 space-y-3">
+                            <h3 class="text-lg font-bold text-white">
+                                عنوان الكتاب
+                            </h3>
+                            <p class="text-sm text-white/70 max-w-xs mx-auto leading-relaxed">
+                                نبذة قصيرة تعطي لمحة سريعة عن محتوى الكتاب
+                                وأهم محاوره الفكرية.
+                            </p>
+                        </div>
+
+                        <div class="mt-6 flex justify-center gap-4">
+
+                            <a href="#" class="px-5 py-2 rounded-full
+             text-sm font-medium
+             border border-[#A98A5B]/60
+             text-[#A98A5B]
+             backdrop-blur-md bg-white/5
+             hover:bg-[#A98A5B]
+             hover:text-white
+             transition">
+                                تفاصيل الكتاب
+                            </a>
+
+                            <a href="#" class="px-5 py-2 rounded-full
+             text-sm font-medium
+             bg-[#A98A5B]
+             text-white
+             hover:bg-[#A98A5B]/90
+             transition">
+                                شراء الآن
+                            </a>
+
+                        </div>
+                    </article>
+                    <article class="book-card group relative text-center">
+
+                        <div class="relative mx-auto w-[220px] h-[320px]
+          rounded-xl overflow-hidden
+          shadow-[0_25px_60px_rgba(0,0,0,0.6)]
+          group-hover:-translate-y-3 transition duration-500">
+
+                            <img src="./public/images/book4.jpg" alt="غلاف الكتاب" class="w-full h-full object-cover">
+
+                            <div class="absolute inset-0 bg-gradient-to-t
+            from-[#231F20]/60 to-transparent">
+                            </div>
+                        </div>
+
+                        <div class="mt-8 space-y-3">
+                            <h3 class="text-lg font-bold text-white">
+                                عنوان الكتاب
+                            </h3>
+                            <p class="text-sm text-white/70 max-w-xs mx-auto leading-relaxed">
+                                نبذة قصيرة تعطي لمحة سريعة عن محتوى الكتاب
+                                وأهم محاوره الفكرية.
+                            </p>
+                        </div>
+
+                        <div class="mt-6 flex justify-center gap-4">
+
+                            <a href="#" class="px-5 py-2 rounded-full
+             text-sm font-medium
+             border border-[#A98A5B]/60
+             text-[#A98A5B]
+             backdrop-blur-md bg-white/5
+             hover:bg-[#A98A5B]
+             hover:text-white
+             transition">
+                                تفاصيل الكتاب
+                            </a>
+
+                            <a href="#" class="px-5 py-2 rounded-full
+             text-sm font-medium
+             bg-[#A98A5B]
+             text-white
+             hover:bg-[#A98A5B]/90
+             transition">
+                                شراء الآن
+                            </a>
+
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer id="site-footer" class="relative overflow-hidden opacity-0 translate-y-4 ">
+            <div
+                class="h-4 bg-gradient-to-t glass-card shadow-md border border-primary rounded-b-3xl rounded-t-md w-full ">
+            </div>
+
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute inset-0
+      bg-repeat opacity-[0.04]" style="background-image: url(../public/images/pattern2.jpeg);"></div>
+
+                <div class="absolute bottom-0 left-1/2 -translate-x-1/2
+      w-[70%] h-[300px]
+      bg-[#A98A5B]/20 blur-[160px] opacity-40"></div>
+            </div>
+
+            <div class="relative container mx-auto px-6 py-10">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-5 ">
+
+                    <div class=" pl-44">
+                        <img src="./public/images/dar-rashed.png" alt="Dar Rashid Publishing" class="w-32">
+                    </div>
+
+                    <div class=" ">
+                        <h5 class="text-sm tracking-widest text-[#A98A5B] uppercase   gap-3">
+                            روابط سريعة
+                            <span class="w-10 h-[2px] bg-[#A98A5B] block"></span>
+                        </h5>
+                        <ul class="space-y-3 text-sm text-primary-80 mt-4">
+                            <li><a href="#" class="hover:text-[#A98A5B] transition text-dark-80">عن الدار</a></li>
+                            <li><a href="#" class="hover:text-[#A98A5B] transition text-dark-80">الإصدارات</a></li>
+                            <li><a href="#" class="hover:text-[#A98A5B] transition text-dark-80">الفعاليات</a></li>
+                            <li><a href="#" class="hover:text-[#A98A5B] transition text-dark-80">الأخبار</a></li>
+                        </ul>
+                    </div>
+
+                    <div class=" ">
+
+                        <h4 class="text-sm tracking-widest text-[#A98A5B]  gap-3">
+                            تواصل معنا
+                            <span class="w-10 h-[2px] bg-[#A98A5B] block"></span>
+                        </h4>
+
+                        <ul class="space-y-4 text-sm text-white/80 mt-4">
+
+                            <li class="flex  gap-4">
+                                <span class="w-8 h-8 rounded-xl border border-[#A98A5B]/60
+                flex items-center justify-center
+                text-[#A98A5B]
+                hover:bg-[#A98A5B] hover:text-[#231F20]
+                transition">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </span>
+                                <span class="text-dark-80 w-2">+97192014444</span>
+
+                            </li>
+
+                            <li class="flex  gap-4">
+                                <span class="w-8 h-8 rounded-xl border border-[#A98A5B]/60
+                flex items-center justify-center
+                text-[#A98A5B]
+                hover:bg-[#A98A5B] hover:text-[#231F20]
+                transition">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </span>
+                                <a href="mailto:info@fcma.gov.ae"
+                                    class="text-dark-80 hover:text-[#A98A5B] transition underline-offset-4 ">
+                                    info@fcma.gov.ae
+                                </a>
+                            </li>
+
+                            <li class="flex  gap-4">
+                                <span class="w-8 h-8 rounded-xl border border-[#A98A5B]/60
+                flex items-center justify-center
+                text-[#A98A5B]
+                hover:bg-[#A98A5B] hover:text-[#231F20]
+                transition">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </span>
+                                <span class="text-dark-80">الفجيرة، الإمارات العربية المتحدة</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class=" ">
+                        <h5 class="text-sm tracking-widest text-[#A98A5B] uppercase  gap-3">
+                            تابعنا على
+                            <span class="w-10 h-[2px] bg-[#A98A5B] block"></span>
+                        </h5>
+
+                        <div class="flex  gap-3 mt-4">
+                            <a href="#" class="w-11 h-11 rounded-xl border border-[#A98A5B]/60
+                flex items-center justify-center
+                text-[#A98A5B]
+                hover:bg-[#A98A5B] hover:text-[#231F20]
+                transition">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+
+                            <a href="#" class="w-11 h-11 rounded-xl border border-[#A98A5B]/60
+                flex items-center justify-center
+                text-[#A98A5B]
+                hover:bg-[#A98A5B] hover:text-[#231F20]
+                transition">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class=" bg-dark W-[100Vw] py-3 ">
+                <div
+                    class="container flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/70">
+
+                    <p>© 2026 دار راشد للنشر — جميع الحقوق محفوظة</p>
+
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-[#A98A5B] transition">سياسة الخصوصية</a>
+                        <a href="#" class="hover:text-[#A98A5B] transition">شروط الاستخدام</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </footer>
+
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+    <script src="./dist/animation.js"></script>
+
+</body>
+
+</html>
